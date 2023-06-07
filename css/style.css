@@ -502,26 +502,52 @@ button {
   max-width: 264px;
   color: #f4f4fd;
 }
-.footer2 .item-text {
+.footer-item-title {
   font-weight: 500;
   color: #ffffff;
   margin-bottom: 16px;
 }
-.footer .social-list {
+.footer-media .social-list {
   gap: 16px;
 }
-.footer .social-link {
+.footer-media .social-link {
   padding: 8px;
 }
 
-.footer .social-link {
+.footer-media .social-link {
   transition: background-color var(--cubic);
 }
 
-.footer .social-link:hover,
-.footer .social-link:focus {
+.footer-media .social-link:hover,
+.footer-media .social-link:focus {
   background-color: #31d0aa;
 }
+
+.footer-media {
+  margin-right: 80px;
+}
+
+.footer-input {
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+.footer-input::placeholder {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
 /* =================== /Footer =================== */
 
 /* =================== Modal Window =================== */
@@ -593,17 +619,8 @@ button {
 /* =================== /Modal Window =================== */
 
 /* =================== Modal Form =================== */
-.form {
-}
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-.group-title {
+
+.modal-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -612,15 +629,20 @@ button {
   text-align: center;
   margin-bottom: 16px;
 }
+
+.form-field {
+  margin-bottom: 8px;
+}
+
 .form-label {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  display: block;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #8e8f99;
+  margin-bottom: 4px;
 }
+
 .form-input-wrap {
   display: block;
   position: relative;
@@ -636,7 +658,13 @@ button {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   transition: border var(--cubic);
-  padding-left: 34px;
+  padding-left: 38px;
+  outline: none;
+}
+
+.form-input:focus {
+  outline: none;
+  border: 1px solid #4d5ae5;
 }
 
 .form-icon {
@@ -647,11 +675,6 @@ button {
   margin-left: 16px;
   fill: var(--modal-icons);
   transition: fill var(--cubic);
-}
-
-.form-input:focus {
-  outline: none;
-  border: 1px solid #4d5ae5;
 }
 
 .form-input:focus + .form-icon {
@@ -684,5 +707,90 @@ button {
 .form-comment:focus {
   outline: none;
   border: 1px solid #4d5ae5;
+}
+
+.form-check-desc {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 24px;
+}
+
+.form-check-desc a {
+  color: #4d5ae5;
+}
+
+.check-icon-wrap {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  margin-right: 8px;
+  transition: background-color var(--cubic);
+  cursor: pointer;
+}
+
+.check-icon {
+  opacity: 0;
+  fill: transparent;
+  transition: opacity var(--cubic) fill var(--cubic);
+}
+
+.form-check:checked + .form-check-desc .check-icon-wrap {
+  background-color: #404bbf;
+}
+
+.form-check:checked + .form-check-desc .check-icon {
+  opacity: 1;
+  fill: #f4f4fd;
+}
+
+/* .form-check-desc::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.form-check:checked + .form-check-desc::before {
+  background-image: url(../images/checkbox.svg);
+  background-color: #404bbf;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-check:focus + .form-check-desc::before {
+  border: 1px solid #404bbf;
+} */
+
+.submit-btn {
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
+  height: 56px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: var(--hero-bg-btn);
+  border-radius: 4px;
+  padding: 16px 32px;
+
+  transition: background-color var(--cubic);
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: var(--active-bg-btn);
 }
 /* =================== /Modal Form =================== */
