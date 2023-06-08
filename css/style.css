@@ -783,6 +783,7 @@ button {
 
 .form-check:checked + .form-check-desc .check-icon-wrap {
   background-color: #404bbf;
+  border: none;
   fill: var(--color-white);
 }
 
