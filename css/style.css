@@ -695,21 +695,17 @@ button {
   border-radius: 4px;
   transition: border-color var(--cubic);
   padding-left: 38px;
-  outline: none;
 }
 
 .form-input:focus {
-  outline: none;
   border-color: #4d5ae5;
 }
 
 .form-icon {
-  display: block;
   position: absolute;
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
-  fill: var(--modal-icons);
   transition: fill var(--cubic);
 }
 
@@ -722,7 +718,6 @@ button {
   width: 100%;
   height: 120px;
   padding: 8px 16px;
-
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -788,13 +783,13 @@ button {
 
 .form-check:checked + .form-check-desc .check-icon-wrap {
   background-color: #404bbf;
-  border: none;
   fill: var(--color-white);
 }
 
 .form-check:focus + .form-check-desc .check-icon-wrap {
   border-color: #4d5ae5;
 }
+
 /* 
 .form-check:checked + .form-check-desc .check-icon {
   opacity: 1;
