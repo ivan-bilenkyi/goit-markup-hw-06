@@ -527,6 +527,10 @@ button {
   margin-right: 80px;
 }
 
+.form-subscribe > .form-field {
+  display: flex;
+  align-items: center;
+}
 .footer-input {
   width: 264px;
   height: 40px;
@@ -539,6 +543,7 @@ button {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #ffffff;
+  margin-right: 24px;
 }
 
 .footer-input::placeholder {
@@ -546,6 +551,31 @@ button {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #ffffff;
+}
+
+.subscribe-btn {
+  height: 40px;
+  min-width: 165px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: var(--hero-bg-btn);
+  border-radius: 4px;
+
+  transition: background-color var(--cubic);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: var(--active-bg-btn);
+}
+.subscribe-icon {
+  margin-left: 16px;
+  fill: #ffffff;
 }
 
 /* =================== /Footer =================== */
@@ -744,6 +774,7 @@ button {
 
 .form-check:checked + .form-check-desc .check-icon-wrap {
   background-color: #404bbf;
+  border: transparent;
 }
 
 .form-check:checked + .form-check-desc .check-icon {
