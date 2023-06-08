@@ -504,6 +504,8 @@ button {
 }
 .footer-item-title {
   font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px;
 }
@@ -527,41 +529,42 @@ button {
   margin-right: 80px;
 }
 
-.form-subscribe > .form-field {
+.form-subscribe {
   display: flex;
   align-items: center;
+  gap: 24px;
 }
 .footer-input {
   width: 264px;
   height: 40px;
-  padding: 8px 16px;
+  padding-left: 16px;
   background-color: transparent;
   border: 1px solid #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   font-size: 12px;
-  line-height: 2;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
-  margin-right: 24px;
 }
 
 .footer-input::placeholder {
   font-size: 12px;
-  line-height: 2;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
 }
 
 .subscribe-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   height: 40px;
   min-width: 165px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
   color: #ffffff;
   background-color: var(--hero-bg-btn);
   border-radius: 4px;
@@ -707,10 +710,6 @@ button {
   transition: fill var(--cubic);
 }
 
-.form-input:focus + .form-icon {
-  fill: var(--active-modal-icons);
-}
-
 .form-comment {
   resize: none;
   width: 100%;
@@ -775,6 +774,10 @@ button {
 .form-check:checked + .form-check-desc .check-icon-wrap {
   background-color: #404bbf;
   border: transparent;
+}
+
+.form-check:focus + .form-check-desc .check-icon-wrap {
+  border-color: #4d5ae5;
 }
 
 .form-check:checked + .form-check-desc .check-icon {
