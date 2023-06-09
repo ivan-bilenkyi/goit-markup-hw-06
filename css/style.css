@@ -722,7 +722,7 @@ button {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
-  border: 1px solid rgba(46, 47, 66, 0.2);
+  border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   background-color: transparent;
   outline: transparent;
@@ -781,7 +781,7 @@ button {
 .form-check:checked + .form-check-desc .check-icon-wrap {
   background-color: #404bbf;
   border: none;
-  fill: var(--color-white);
+  fill: #f4f4fd;
 }
 
 .form-check:focus + .form-check-desc .check-icon-wrap {
